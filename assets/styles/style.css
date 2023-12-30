@@ -5,5 +5,69 @@
 }
 
 html {
-  font-size: 62,5%;
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article{
+  max-width: 32rem;
+}
+
+.imgContainer {
+  width:32rem;
+  height:25rem;
+  background-image: url(../img/wonkaCover.webp);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dataMovie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.dataMovie > h2 {
+  font-size: 1.8rem;
+}
+.dataMovie > h4 {
+  font-size: 1.4rem;
+}
+
+.reviewContainer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviewContainer > img {
+  width: 10rem;
+  border-radius: 100%;
+}
+.reviewContainer > h4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.reviewContainer > p {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+.controlContainer {
+  margin: auto;
+  width: 15rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-evenly;
 }
