@@ -35,3 +35,46 @@ const reviews = [
     img: "./assets/img/Sean Axmaker.webp",
   },
 ]
+
+// Controls
+const backwardBtn = document.getElementById('backward');
+const forwardBtn = document.getElementById('forward');
+const randomBtn = document.getElementById('random');
+
+// Reviews
+const imgCritic = document.getElementById('imgCritic');
+const nameCritic = document.getElementById('nameCritic');
+const review = document.getElementById('review');
+
+let position = 0;
+
+function increase() {
+  position += 1;
+  if(position == reviews.length) {
+    position = 0;
+  }
+  console.log(reviews[position]);
+  console.log(position);
+  imgCritic.src = reviews[position].img;
+  nameCritic.textContent = reviews[position].autor;
+  review.textContent = `"${reviews[position].critic}"`;
+}
+
+function decrease() {
+  position -=1;
+  if(position == -1) {
+    position = 6;
+  }
+  console.log(reviews[position]);
+  console.log(position);
+  imgCritic.src = reviews[position].img;
+  nameCritic.textContent = reviews[position].autor;
+  review.textContent = `"${reviews[position].critic}"`;
+}
+
+function random() {
+
+}
+
+forwardBtn.addEventListener('click', increase);
+backwardBtn.addEventListener('click', decrease);
