@@ -45,10 +45,12 @@ article{
 .dataMovie > h2 {
   font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
+  color: #3D3B40;
 }
 .dataMovie > h4 {
   font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
+  color: #4c4a50;
 }
 
 .reviewContainer {
