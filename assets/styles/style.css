@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Franklin:ital,wght@1,300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,26 +8,31 @@
 
 html {
   font-size: 62.5%;
-  height: 100vh;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 article{
   max-width: 32rem;
+  background-color: #F3F3F3;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
 }
 
 .imgContainer {
   width:32rem;
-  height:25rem;
+  height:22rem;
   background-image: url(../img/wonkaCover.webp);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .dataMovie {
@@ -36,16 +43,18 @@ article{
   padding-bottom: 1.5rem;
 }
 .dataMovie > h2 {
-  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
 }
 .dataMovie > h4 {
+  font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
 }
 
 .reviewContainer {
+  height: 27rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  background-color: bisque;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,15 +62,19 @@ article{
 .reviewContainer > img {
   width: 10rem;
   border-radius: 100%;
+  border: 2px solid #3976DC;
 }
 .reviewContainer > h4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  color: #3976DC;
 }
 .reviewContainer > p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-style: italic;
+  font-family: 'Libre Franklin', sans-serif;
 }
 .controlContainer {
   margin: auto;
@@ -70,4 +83,18 @@ article{
   padding-bottom: 3rem;
   display: flex;
   justify-content: space-evenly;
+}
+.controlContainer > button {
+  color: #3976DC;
+  background-color: transparent;
+  font-size: 1.4rem;
+  border: 0.1rem solid #3976DC;
+  padding: 0.5rem 0.3rem;
+  border-radius: 0.5rem;
+  font-family: 'Inter', sans-serif;
+}
+.controlContainer > button:hover {
+  background-color: #3976DC;
+  color:#F3F3F3;
+  transition: background-color 0.3s ease;
 }
