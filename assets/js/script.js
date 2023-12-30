@@ -46,35 +46,42 @@ const imgCritic = document.getElementById('imgCritic');
 const nameCritic = document.getElementById('nameCritic');
 const review = document.getElementById('review');
 
-let position = 0;
+let index = 0; // Increace and Decrease function
+let lastIndex = -1 // Random function
 
 function increase() {
-  position += 1;
-  if(position == reviews.length) {
-    position = 0;
+  index += 1;
+  if(index == reviews.length) {
+    index = 0;
   }
-  console.log(reviews[position]);
-  console.log(position);
-  imgCritic.src = reviews[position].img;
-  nameCritic.textContent = reviews[position].autor;
-  review.textContent = `"${reviews[position].critic}"`;
+  console.log(reviews[index]);
+  imgCritic.src = reviews[index].img;
+  nameCritic.textContent = reviews[index].autor;
+  review.textContent = `"${reviews[index].critic}"`;
 }
 
 function decrease() {
-  position -=1;
-  if(position == -1) {
-    position = 6;
+  index -=1;
+  if(index == -1) {
+    index = 6;
   }
-  console.log(reviews[position]);
-  console.log(position);
-  imgCritic.src = reviews[position].img;
-  nameCritic.textContent = reviews[position].autor;
-  review.textContent = `"${reviews[position].critic}"`;
+  console.log(reviews[index]);
+  imgCritic.src = reviews[index].img;
+  nameCritic.textContent = reviews[index].autor;
+  review.textContent = `"${reviews[index].critic}"`;
 }
 
-function random() {
-
+function randomCritic() {
+  let newIndex;
+  do {
+    newIndex = Math.floor(Math.random() * reviews.length);
+  } while (newIndex === lastIndex);
+  lastIndex = newIndex;
+  imgCritic.src = reviews[newIndex].img;
+  nameCritic.textContent = reviews[newIndex].autor;
+  review.textContent = `"${reviews[newIndex].critic}"`;
 }
 
 forwardBtn.addEventListener('click', increase);
 backwardBtn.addEventListener('click', decrease);
+randomBtn.addEventListener('click', randomCritic);
